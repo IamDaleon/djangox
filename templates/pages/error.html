@@ -5,22 +5,21 @@
 {% block content %}
 
 <style>
-  table, th{
-    border:1px solid black;
-    text-align: center;
-    font-weight: 700;
-    /* font-size: 14px; */
-    background-color: white;
-  }
-  th{
-    background-color: red;
-    color: white;
-    font-size: 16px;
-  }
-  table, td {
-    border:1px solid black;
-    font-weight: 400;
-  }
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
   h1 {
     text-align: center;
     font-weight: 800;
@@ -66,41 +65,92 @@
 }
   </style>
 
-    <h1> Error Page </h1>
-    <form action="/action_page.php">
-      <label for="dop">Date of Purchase:</label><br />
-      <input type="date" id="dop">
+<div class=" container-lg main">
+  <hr class="expandererror"/>
+  <img src="../../static/images/assets/OPMS-LOGO.webp" />
+  <div class="errorbanner">
+    <h3 class="title" style='color:white; font-weight: bold'>Sorry!</h3>
+    <h4  style='color:white; font-size: medium; text-transform: uppercase; font-weight: bold'><br /> The product that you've scanned is not AUTHENTIC</h4>
+  </div>
+<div class="qcontainer">
+  <form action="#"> <!-- << The form needs to routed correctly -->
+    <label for="DOP">Date of Purchase:</label>
+      <br />
+      <input type="date" id="DOP" name="DOP" />
       <br />
       <br />
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" value="John"><br>
-      <label for="fname">Last name:</label><br>
-      <input type="text" id="fname" value="John"><br><br>
-      <input type="submit" value="Submit">
-    </form>
+    <label for="product">Product Brand</label>
+    <select id="product" name="product">
+      <option value="usa">O.P.M.S.® Gold Capsules</option>
+      <option value="usa">O.P.M.S.® Gold Liquid</option>
+      <option value="usa">O.P.M.S.® Black Capsules</option>
+      <option value="usa">O.P.M.S.® Gold Liquid</option>
+      <option value="usa">O.P.M.S.® Silver Capsules</option>
+      <option value="usa">O.P.M.S.® OPK Kava Capsules</option>
+      <option value="usa">O.P.M.S.® OPK Kava Liquid</option>
+    </select>
+    <Label for="zip">ZIP/ Country Code</Label>
+    <input type="text" pattern="[0-9]{5}" title="Five digit zip code" name="zip" />
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <option value="australia">Australia</option>
+    </select>
+
+    <label for="subject">Need to say more?</label>
+    <textarea id="subject" name="subject" placeholder="Let us know here.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
     <!-- Trigger/Open The Modal -->
-<button id="myBtn">View Approved Retail Shops</button>
+    <div class="qcontainer">
+      <button id="moreShops" class="modalbtn">View Approved Retail Shops</button>
+    </div>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="popUpModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
+    <h2>Verified Retail</h2>
     <div>
-      <h3>Approved Resellers</h3>
-      <p>Some text in the Modal..</p>
+
+<table>
+  <tr>
+    <th>Company Name</th>
+    <th>Contact #</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td>Puff-n-Stuff</td>
+    <td>555-555-1234</td>
+    <td>Dallas, TX</td>
+  </tr>
+  <tr>
+    <td>The Smoke Shop</td>
+    <td>973-555-1235</td>
+    <td>Orange, NJ</td>
+  </tr>
+  <tr>
+    <td>The Chief</td>
+    <td>312-555-8698</td>
+    <td>Chicago, IL</td>
+  </tr>
+</table>
     </div>
   </div>
 
 </div>
     <script>
       // Get the modal
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("popUpModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("moreShops");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];

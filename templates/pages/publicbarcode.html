@@ -4,46 +4,101 @@
 
 {% block content %}
 
-<style>
-  table, th{
-    border:1px solid black;
-    text-align: center;
-    font-weight: 700;
-    /* font-size: 14px; */
-    background-color: white;
-  }
-  th{
-    background-color: red;
-    color: white;
-    font-size: 16px;
-  }
-  table, td {
-    border:1px solid black;
-    font-weight: 400;
-  }
-  h1 {
-    text-align: center;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-  </style>
+<body>
+  <div class=" container-lg main">
+    <hr class="expander"/>
+    <img src="../static/images/assets/OPMS-LOGO.webp" />
+      <h5 class="title">QR Scanner</h5>
 
-    <h1> Barcode Scanner </h1>
+    <div class="mainform">
+
+      <form class="well form-horizontal" action="" method="post"  id="contact_form">
+          <form action = "" method="post">
+              {% csrf_token %}
+               
+              <div class="form-group center-block">
+          
+                  <div id="reader" width="600px" name="barcode"></div>
+
+                  <div class="col-md-4 inputGroupContainer divter">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
+                          <input  name="qrcode_values" placeholder="QR CODE" class="form-control" id="QR"  type="text">
+                          <input type="hidden" name="ip_address" value="{{ ip_address }}">
+
+                      </div>
+
+                      <div id="loadingGif" style="display:none"><img class='smlImg' src="https://media1.giphy.com/media/yyqOUPn5souNBSHUnU/giphy.gif?cid=ecf05e477qkdn2uuhk8kleuewhinp7o8hda02myd1jrpjnr7&rid=giphy.gif&ct=s"></div>
+
+
+
+
+
+                  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+                  
+                  <input type="submit" class="btn cbodalert" value="Submit" name="submit" id="Login" value="Sign in" width="104" height="25" border="0" tabindex="5" onclick="showLoader()"> 
+               
+              </div>
+        </form>
+    </div>
+  </div>
+
+  <script>
+      function showLoader() {
+          document.getElementById('loadingGif').style.display = "block";
+          setTimeout(function() {
+              document.getElementById('loadingGif').style.display = "none";
+          },5000);
+          }
+  </script>
+
+{% comment %} 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="/js/validator.js"></script> {% endcomment %}
+</body>
+
+
+  
+      
+     
+
+
+  
+</form>  
+
+
+   
+  
+
+  
+</div>
+
+<script>
+// Handle QR Code input
+
+function onScanSuccess(decodedText, decodedResult) {
+    // handle the scanned code as you like, for example:
+    console.log(`Code matched = ${decodedText}`, decodedResult);
+    console.log(decodedText);
+
+    //Place the decoded text in the input field
+    document.getElementById("QR").value = decodedText;
+
     
-    <table style="width:100%">
-      <tr>
-        <th>Date Issued</th>
-        <th>Product Name</th>
-        <th>What to do</th>
-        <th>Termination Date</th>
-      </tr>
-      <tr>
-        <td>12/13/2022</td>
-        <td>Yellow Liquid</td>
-        <td>Return to Seller</td>
-        <td>Current</td>
-      </tr>
-    </table>
+  
+}
+
+var html5QrcodeScanner = new Html5QrcodeScanner(
+  "reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+
+// Get result back from the server after form is submitted
+
+
+</script>
+
+
+
     
 
     {% endblock content %}

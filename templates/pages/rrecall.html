@@ -1,0 +1,95 @@
+{% extends '_base.html' %}
+
+{% block title %}About page{% endblock %}
+
+{% block content %}
+
+<style>
+
+    h1 {
+      text-align: center;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    
+    .recall-img{
+        width: 25%;
+        height: 25%;
+    }
+    .recall-list{
+    -webkit-box-shadow: 1px 1px 3px #99a1b0;
+    -moz-box-shadow: 1px 1px 3px #99a1b0;
+    padding: 1rem;
+    margin: 3rem 0;
+    border-top: solid 4px #3f88c5;
+}
+
+.grid-container {
+    display: grid;
+    border-top: solid 1.5px #ff0101;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+.item1 {
+  grid-row: 1 / span 2;
+}
+.item2 {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 3;
+}
+.item3 {
+  grid-row: 1 / span 2;
+  padding: 0 200px;
+}
+.item4 {
+  grid-row: 1 / span 2;
+}
+  </style>
+
+    <div class=" container-lg main">
+      <hr class="expander"/>
+      <img src="../static/images/assets/OPMS-LOGO.webp" />
+        <h5 class="title">Recalls</h5>
+  
+        <div class="grid-container">
+            <div class="item1">
+                <div class="recall_date">
+                    December XX, 20XX
+                </div>
+                <div class="recall_info">
+                    <img src="../../static/images/assets/OPMS-Black-1024x1024.png" alt="" width="auto" height="125px">
+                    <br />
+                    <a href="#">O.P.M.S recalls Black Liquid <br />due to the wrapper staining<br /> ( Recall Alert )</a>
+                </div>
+            </div>
+            <div class="item2">Hazard:<br/>
+                Wrapper causing irritation to the skin via the ink staining 
+                <br/>
+                <br/>
+                <div class="item3">
+                    Remedy:
+                    <br />
+                    Consumers should immediately stop using the recalled product and contact an authorized dealer to schedule a free inspection. O.P.M.S is contacting all known purchasers directly.
+                </div>
+
+                <br />
+                <div>
+                    Consumer Contact:
+                    <br />
+                    1-(855)-555-5555
+                </div>
+            </div>                
+</div>
+           
+    </div>
+{% endblock content %}

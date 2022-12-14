@@ -1,5 +1,14 @@
 /* Sticky footer styles
 -------------------------------------------------- */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url("../images/assets/greyscale.webp");
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -30,4 +39,80 @@ body {
   height: 60px; /* Set the fixed height of the footer here */
   line-height: 60px; /* Vertically center the text there */
   background-color: #f5f5f5;
+}
+
+#reader {
+ border: none !important;
+}
+
+#reader__dashboard_section_csr button {
+    color: white;
+    background-color: #bf2222;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+#html5-qrcode-anchor-scan-type-change a{
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    padding: 18px 30px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+/* Style inputs with type="date", select elements and textareas */
+.qcontainer input[type=date], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.qcontainer input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+.qcontainer input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.qcontainer input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.qcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 85px;
 }

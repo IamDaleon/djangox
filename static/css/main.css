@@ -1,0 +1,226 @@
+.main{
+    position: relative;
+    margin: 30px auto;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+}
+
+.title{
+    font-size: xx-large;
+    
+}
+
+.expandererror{
+    border: 2px solid red;
+}
+
+.expander{
+    border: 2px solid green;
+}
+
+.card{ 
+    color: black;
+    background-color: white;
+    border: none;
+}
+
+.card-group{
+    padding: 0 75px;
+}
+
+/* @media screen and (max-width:600px) {
+    .card-group{
+        padding: 0 15px;
+    }
+} */
+
+@media screen and (min-width: 1200px) {
+    .col-lg-3{
+        /* padding: 0 15px; */
+        /* width: 100%; */
+        text-align: center;
+    }
+}
+
+.card-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+    padding: 25px 0;
+}
+
+.card-img-top{
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 125px;
+    padding: 25px 0;
+}
+
+.spacer{
+    border: 1px solid black;
+    border-radius: 15px ;
+    padding: 5px 3vw;
+    text-decoration: none;
+}
+
+.basic{
+    background-color: white; /* Green */
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.gap{
+    margin: 35px 0 !important;
+}
+
+#success_message{ display: none;}
+
+.mb-3{
+    color: black;
+    background-color: white;
+    border: none;
+    margin: 15px 15vw;
+    padding: 5vh;
+}
+
+th{
+    text-align:center;
+}
+
+
+.titleinvert{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.row{
+    margin: 0 !important;
+}
+
+.errorbanner{
+    background-color: red !important;
+    height: 100px;
+    text-align: center;
+    padding: 0 auto;
+    
+}
+
+/* CSS FOR THE HOVER BUTTONS */
+
+.wrap {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cbod {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgb(78, 143, 77);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.cbod:hover {
+    background-color: rgb(46, 85, 45);
+    box-shadow: 0px 15px 20px rgb(158, 158, 158);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.cbodalert {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(194, 46, 19);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    margin: 5% 15%;
+}
+
+.cbodalert:hover {
+    background-color: rgb(148, 1, 1);
+    box-shadow: 0px 15px 20px rgb(158, 158, 158);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+/* .btngrower {
+    color: white;
+    background-color: #bf2222;
+    border: none;
+    color: black;
+    padding: 18px 100px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px;
+    font-size: 20px;
+  } */
+  
+  .mainform{
+    padding: 15px 0;
+  }
+
+  .btnrow{
+    margin: 0 10% !important;
+  }
+
+  @media screen and (max-width: 675px) {
+    .btnrow{
+        margin: 0 50% !important;
+        display: inline !important;
+      }
+
+    .btncol{
+        width: 100% !important;
+    }
+}
+
+.divter{
+    width:100%;
+    padding: 0 15%;
+}
+
+/* #loadingGif{
+    width: 25px;
+    height: 25px;
+} */
+
+.smlImg{
+    width: 65px;
+}
+
+.modalbtn{
+    background-color: #008d59;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

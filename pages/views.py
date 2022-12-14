@@ -15,3 +15,7 @@ def error(request):
     return render(request, 'pages/error.html')
 def success(request):   
     return render(request, 'pages/success.html')
+def rrecall(request):   
+    return render(request, 'pages/rrecall.html')
+def modernreader(request):   
+    return render(request, 'pages/modernreader.html')

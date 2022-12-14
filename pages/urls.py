@@ -1,11 +1,13 @@
 from django.urls import path
 
-from .views import HomePageView, AboutPageView, publicbarcode, success, error
+from .views import HomePageView, AboutPageView, publicbarcode, success, error, rrecall,modernreader
 
 urlpatterns = [
-    path("", HomePageView.as_view(), name="home"),
+    path("", publicbarcode, name="publicbarcode"),
     path("about/", AboutPageView.as_view(), name="about"),
     path("publicbarcode/",  publicbarcode, name="publicbarcode"),
     path("error/",  error, name="error"),
     path("success/", success, name="success"),
+    path("recall/", rrecall, name="recall"),
+    path("modernreader/", modernreader, name="modernreader"),
 ]
