@@ -19,3 +19,5 @@ def rrecall(request):
     return render(request, 'pages/rrecall.html')
 def modernreader(request):   
     return render(request, 'pages/modernreader.html')
+def modernrecall(request):   
+    return render(request, 'pages/modernrecall.html')

@@ -1,0 +1,52 @@
+{% extends '_base.html' %}
+
+{% block title %} Lots for Product {% endblock %}
+
+{% block content %}
+<div class="container-lg main rounded">
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="max-w-xl mb-6 sm:mx-auto sm:text-center md:mb-10 lg:max-w-2xl">
+    <p class="mb-1 text-4xl font-bold tracking-wide uppercase md:mb-2">
+      Recalls
+    </p>
+    <p class="text-base text-gray-700 md:text-lg">
+      This is a list of our current product recalls.
+    </p>
+    <hr />
+  </div>
+  <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+    <div class="flex flex-col justify-center">
+      <div class="max-w-xl mb-6">
+        <h2 class=" mb-4 font-sans text-sm font-bold tracking-tight text-gray-900 sm:text-2xl sm:leading-none">
+          <span class="relative px-1">
+            <span class="relative inline-block text-deep-purple-accent-400 text-xs">Dec 15th, 2022</span>
+            <br class="hidden md:block" />
+          </span>
+          O.P.M.S Yellow Liquid<br class="hidden md:block" />
+          (RECALL)
+        </h2>
+      </div>
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase">Reason</p>
+      <p class="text-base text-gray-700 md:text-lg">
+       Turns your tongue purple
+      </p>
+      <br class="hidden md:block" />
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase">Remedy</p>
+      <p class="text-base text-gray-700 md:text-lg">
+        Reason, Remedy, Contact Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+      </p>
+      <br class="hidden md:block" />
+      <p class="mb-4 text-sm font-bold tracking-widest uppercase">Contact</p>
+      <p class="text-base text-gray-700 md:text-lg">
+        P: 855-555-1234 | E: info@opms.com
+      </p>
+      <br class="hidden md:block" />
+      </div>
+    <div>
+      <img class="object-cover w-full h-85 rounded shadow-lg sm:h-100" src="../../static/images/assets/OPMS-Black-1024x1024.png" alt="" />
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock content %}
