@@ -21,3 +21,7 @@ def modernreader(request):
     return render(request, 'pages/modernreader.html')
 def modernrecall(request):   
     return render(request, 'pages/modernrecall.html')
+def modernbarcode(request):   
+    return render(request, 'pages/modernbarcode.html')
+def modernsuccess(request):   
+    return render(request, 'pages/modernsuccess.html')

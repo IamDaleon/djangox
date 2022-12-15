@@ -1,0 +1,39 @@
+{% extends '_base.html' %}
+
+{% block title %} Lots for Product {% endblock %}
+
+{% block content %}
+
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 main rounded">
+    <div class="grid gap-12 row-gap-8 lg:grid-cols-2">
+        <div>
+            <img class="object-cover w-full h-55 rounded shadow-lg " src="../../static/images/assets/OPMS-Black-1024x1024.png" alt="" />
+          </div>
+      <div class="flex flex-col justify-center">
+        <div class="max-w-xl mb-6">
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            {PRODUCT COMPANY}
+            <span class="inline-block text-deep-purple-accent-400">
+                {PRODUCT TITLE}
+            </span>
+          </h2>
+          <p class="text-base text-gray-700 md:text-lg">
+            BARCODE: TESTING7/26:390915
+          </p>
+          <p class="text-base text-gray-700 md:text-lg">
+            LOT NUMBER:XXXX
+          </p>
+          <p class="text-base text-gray-700 md:text-lg">
+            DISTRUBTOR: XXXXXXX
+          </p>
+        </div>
+        <a href="/modernbarcode">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            Scan Another
+            </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}
